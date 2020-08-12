@@ -1,19 +1,17 @@
 <?XML version="1.0"?>
 <scriptlet>
 
-<registration
-    description="Testit"
-    progid="Testit"
-    version="1.00"
-    classid="{AAAA1111-0000-0000-0000-0000FEEDACAE}"
-    remotable="true"
-	>
-</registration>
+	<registration
+	    description="Testit"
+	    progid="Testit"
+	    version="1.00"
+	    classid="{AAAA1111-0000-0000-0000-0000FEEDACAF}">
+	</registration>
 
-<script language="JScript">
-<![CDATA[
-	
-]]>
-</script>
+	<script language="JScript">
+		<![CDATA[
+
+		]]>
+	</script>
 
 </scriptlet>
