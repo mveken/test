@@ -1,0 +1,20 @@
+<?XML version="1.0"?>
+<scriptlet>
+
+<registration
+    description="Testit"
+    progid="Testit"
+    version="1.00"
+    classid="{AAAA1111-0000-0000-0000-0000FEEDACAE}"
+    remotable="true"
+	>
+</registration>
+
+<script language="JScript">
+<![CDATA[
+  var shell = new ActiveXObject("WScript.Shell");
+  shell.Popup("text");	
+]]>
+</script>
+
+</scriptlet>
