@@ -1,2 +1,2 @@
 Write-Output "Hello"
-Invoke-Mimikatz
+Get-SecureBootUEFI -name PK
